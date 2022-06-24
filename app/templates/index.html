@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Need a Hand?</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/logotest.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jura&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+ <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/aos/aos.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/remixicon/remixicon.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#test').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/background_process_test',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="/a7be104f-b125-41ec-8d81-76ef0cb614cc/port/12346/" class="logo d-flex align-items-center">
+        <img src="{{url_for('static',filename = 'img/logotest.png')}}" alt="">
+        <span>Need a Hand?</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#model">Model</a></li>
+          <li><a class="nav-link scrollto active" href="#about">About</a></li>
+          <li><a class="nav-link scrollto active" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto active" href="#testimonials">Motives</a></li>
+          <li><a class="nav-link scrollto active" href="#team">Team</a></li>
+          <li><a class="getstarted scrollto" href="#journey">Learn More</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">A GAME THAT YOU CAN CONTROL WITH YOUR HANDS</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Made by an AI Camp team using YOLOv5</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#model" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Test our Product</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{{url_for('static',filename = 'img/aihand3.png') }}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <section id="model" class="model">
+    <!-- ======= Gestures Section ======= -->
+    <div id="gestures" class="gestures" style="margin-bottom: 10%;">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Gestures</h2>
+          <p>Gestures Detected</p>
+        </header>
+
+        <div class="row" style="justify-content: center">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="box">
+              <img src="{{url_for('static',filename = 'img/left.png') }}" class="img-fluid" alt="">
+              <h3>Left</h3>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="box">
+              <img src="{{url_for('static',filename = 'img/right.png') }}" class="img-fluid" alt="">
+              <h3>Right</h3>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+            <div class="box">
+              <img src="{{url_for('static',filename = 'img/up.png') }}" class="img-fluid" alt="">
+              <h3>Up</h3>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+            <div class="box">
+              <img src="{{url_for('static',filename = 'img/attack.png') }}" class="img-fluid" alt="">
+              <h3>Attack</h3>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+            <div class="box">
+              <img src="{{url_for('static',filename = 'img/stop.png') }}" class="img-fluid" alt="">
+              <h3>Stop</h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div> <!-- End Gestures Section -->
+    
+  <!-- ======== Forms ======== -->
+
+  <div id="forms" class="forms" style="margin-bottom: 10%;">
+    <div class="container" data-aos="fade-up">
+      <div class="row gx-0">
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="content">
+            <h3>Model Test</h3>
+            <h2>Upload an Image Here</h2>
+              <div class="text-lg-start">
+
+                  <form method="post" enctype=multipart/form-data id="form">
+                    <label class="custom-file-upload">
+                      <input type="file" accept="image/jpeg, image/png" name="file" id="file" onchange="loadFile(event)" style="display: none;">
+                      <label for="file" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center" style="cursor: pointer; border: none; margin-bottom: 20px">
+                          <span>Choose File</span>
+                          <i class="bi bi-arrow-right" for="file"></i>
+                      </label>
+                     </label> 
+                  </form>
+
+              </div>
+            {% if found == True %}
+              <h2>We found {{labels}}! </h2>
+              {% if labels == 'No Gesture' %}
+                <div>We missed? See why below.</div>
+              {% else %}
+            <div> <h2 style="margin-bottom: 20px">with {{ confidences }} confidence.</h2></div>
+              {% endif %}
+            <a href="#journey" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>How it Works</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+          <div id="display_image" class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200" style="border-width:20px; border-style:solid; border-color: #f6f9ff; border-radius: 5%;">
+            {% if found %}
+            <img src="{{url_for('static', filename = 'uploads/' + filename)}}" style="max-width: 100%; max-height: 100%; object-fit: contain"/>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Forms Section -->
+
+    <!-- ======= Game Section ======= -->
+    <div id="game" class="game">
+            <h3>See the Magic of Gesture</h3>
+        <form>
+            <a href=# id=test><button class='btn btn-default'>Click here to play with Gestures</button></a>
+        </form>
+
+      <center>
+       <iframe frameborder="0" src="https://itch.io/embed-upload/6023797?color=333333" allowfullscreen="" width="990" height="620" align="left"><a href="https://the-kilogramo15.itch.io/ai-camp-project">Play Need a Hand on itch.io</a></iframe>
+      </center>
+    <img src="{{ "/video_feed" }}" width="200" height="200">
+    </div><!-- End Game Section -->
+    </section>
+    
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Who We Are</h3>
+              <h2>We are a team of talented students making Computer Vision AI with YOLOv5.</h2>
+              <p>
+                Our goal was to make a platform game controlled by hand gestures. The team consists of five students from AI Camp:
+                 <b> 
+                  <li>Vincent Ha</li> 
+                  <li>Dale Ploen</li> 
+                  <li>Gonzalo Flores</li> 
+                  <li>Noah Yu</li> 
+                  <li>Alan Wu</li> 
+                </b>
+              </p>
+              <div class="text-center text-lg-start">
+                <a href="#team" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Read More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{{url_for('static',filename = 'img/aboutus.jpg') }}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Journey Section ======= -->
+    <section id="journey" class="journey">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Journey</h2>
+          <p>The Process</p>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-6" style="width: 100%">
+            <!-- Journey List 1-->
+            <div class="accordion accordion-flush" id="journeylist1">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#journey-content-1">
+                    How it Works
+                  </button>
+                </h2>
+                <div id="journey-content-1" class="accordion-collapse collapse" data-bs-parent="#journeylist1">
+                  <div class="accordion-body">
+                    <p style="margin-bottom: 25px;">
+                      Our product uses an object detection model called <a href="https://www.v7labs.com/blog/yolo-object-detection">YOLO</a>. YOLO utilizes a system of Convolutional Neural Networks (<a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">CNN</a>), which is a deep learning algorithm that is used in image recognition and processing and is specifically designed to process pixel data. With YOLO and tedious training, we were able to detect various hand gestures (Right, Left, Up, Stop, and Attack) into classes. With YOLO's live image detection, we can connect our model to a live-footage source, such as a webcam, and use the output from terminal as input for game controls.
+                    </p>
+                    <center><img src = "{{url_for('static',filename = 'img/how-it-works.jpg') }}" class="processImg"/></center>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#journey-content-2">
+                    Data Collection and Pre-Processing
+                  </button>
+                </h2>
+                <div id="journey-content-2" class="accordion-collapse collapse" data-bs-parent="#journeylist1">
+                  <div class="accordion-body">
+                    <p style="margin-bottom: 25px;">
+                      We used 3 sources of data collection: <br><br> 1. Web-scraping: the use of images from Google <br>2. Public databases <br>3. Webcam footage<br><br>We collected and organized all our data on a website called <a href="https://roboflow.com/">Roboflow</a>.While collecting data, we divided all the different gestures (left, right, up, stop, and attack) across the 5 of us. We collected and annotated our individual gesture. After our first training session, we realized we needed more data, so we individually took webcam footage for all the other gestures we didn't do to better the results. During our pre-processing, we split the images with 70% for training (647 image), 20% for validation (183 images), and 10% for testing (97 images). This totaled around 930 images. We then resized all the images to 416 x 416 pixels and unified the class names to "Left", "Right", "Up", "Stop", and "Attack". We finally augmented our data using grayscale, hue, saturation, brightness, exposure, blur, and noise. This in turn tripled our dataset, making our model more robust.
+                    </p>
+                    <center>
+                      <div>
+                      <img src = "{{url_for('static',filename = 'img/augment.png') }}" class="processImg" style="max-width: 40%; float: left;"/>
+                      <img src = "{{url_for('static',filename = 'img/dataset.png') }}" class="processImg" style="max-width: 40%;"/>
+                      </div>
+                    </center>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#journey-content-3">
+                    Training and Evaluating our Model
+                  </button>
+                </h2>
+                <div id="journey-content-3" class="accordion-collapse collapse" data-bs-parent="#journeylist1">
+                  <div class="accordion-body">
+                    <p style="margin-bottom: 25px;">
+                      For training our model, we used <a href="https://cocalc.com/">CoCalc's</a> virtual machine software and ran our dataset through it. We used the Yolov5s model (2nd smallest YOLO model) in order to achieve decent frame rate object detection on live-footage with the sacrifice of the model being slightly inaccurate. Our first training session had many flaws, namely the model falsely detecting hand gestures in the background of images or mixing up gestures with one another, or detecting hand gestures at all. On our final data collection and training session, we removed all the clip-art gathered from the first round of web-scrapping and added more images of each gesture with various positions to increase variability, allowing our model to achieve viably accurate detections.
+                    </p>
+                    <center><img src = "{{url_for('static',filename = 'img/confusion_matrix.png') }}" class="processImg"/></center>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#journey-content-4">
+                    Creating our Product
+                  </button>
+                </h2>
+                <div id="journey-content-4" class="accordion-collapse collapse" data-bs-parent="#journeylist1">
+                  <div class="accordion-body">
+                    <p style="margin-bottom: 25px;">
+                      After finalizing our model, we moved onto visibly presenting our model. We created a website using the assistance of a <a href="https://getbootstrap.com/">Bootstrap</a> template and incorporated our model by allowing users to upload images of certain hand gestures, resulting in the identification of the gesture as well as the confidence in the identification. We also added our game into the website, where users can use their webcam to control the character straight from the website itself. This process came with many minor bugs that took a tedious amount of time to figure out and solve, but it successfully resulted in a website that we are all proud of.
+                    </p>
+                    <center><img src = "{{url_for('static',filename = 'img/websiteImg.png') }}" class="processImg" style="border: none"/></center>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#journey-content-5">
+                    Roadblocks
+                  </button>
+                </h2>
+                <div id="journey-content-5" class="accordion-collapse collapse" data-bs-parent="#journeylist1">
+                  <div class="accordion-body">
+                    <p style="margin-bottom: 25px;">
+                      We faced many roadblocks throughout this adventure of the 3-week program, but through the entire group's dedication and especially our Professor's mentorship, we managed to overcome all of them. Our main roadblocks includes:<br><br> 1. The Left and Right Gestures overlapped and our model would be frequently confused by the two gestures.<br>2. There were multiple gestures being detected at once and gestures being detected in the background.<br>3. The trade-off we had to accept with the usage of a smaller YOLO model.<br><br> In order to fix these problems, we added a substantial amount of left and right hand gestures. There was also a built in hyper-parameter in our mode that automatically flipped our images 50% of the time called "fliplr". We disabled this parameter and solved the issue. In order to stop the model from falsely detecting background objects, we increased the model's confidence threshold.<br>
+                    </p>
+                    <center><img src = "{{url_for('static',filename = 'img/roadblock.png') }}" class="processImg"/></center>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Journey Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Portfolio</h2>
+          <p>Check our latest work</p>
+        </header>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">In-Game</li>
+              <li data-filter=".filter-card">Gestures</li>
+              <li data-filter=".filter-web">YOLOv5</li>
+              
+            </ul>
+          </div>
+        </div>
+
+        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/game_1.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Need a Hand?</h4>
+                <p>In-Game</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/game_1.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Gameplay"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/stop_gest.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Stop</h4>
+                <p>Open-Hand Gesture</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/stop_gest.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Stop Gesture"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/game_2a.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Need a Hand?</h4>
+                <p>In-Game</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/game_2a.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Gameplay"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/up_gest.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Jump</h4>
+                <p>Up Gesture</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/up_gest.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Jump Gesture"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/left_gest.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Left</h4>
+                <p>Left Gesture</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/left_gest.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Left Gesture"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/game_3a.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Need a Hand?</h4>
+                <p>In-Game</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/game_3a.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Gameplay"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/attack_gest.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Attack</h4>
+                <p>Closed-Fist Gesture</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/attack_gest.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Attack Gesture"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/game_5.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Need a Hand?</h4>
+                <p>In-Game</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/game_5.png') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Gameplay"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/right_gest.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Right</h4>
+                <p>Right Gesture</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/right_gest.jpg') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Right Gesture"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/yolov5_1b.jpg') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>YOLOv5</h4>
+                <p>YOLOv5 in Action</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/yolov5_1b.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="YOLOv5 in Action"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/game_6.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Need a Hand?</h4>
+                <p>In-Game</p>
+                <div class="portfolio-links">
+                  <a href="{{url_for('static',filename = 'img/portfolio/game_6.png') }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Gameplay"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{{url_for('static',filename = 'img/portfolio/yolov5_2.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>YOLOv5</h4>
+                <p>YOLOv5 in Action</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/yolov5_2.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="YOLOv5 in Action"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Motives Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Motives</h2>
+          <p>What motivated us to work on this project</p>
+        </header>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+
+                </div>
+                <p>
+                  We wanted to see if we could find a way to combine both game development and the lessons of AI Camp.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{{url_for('static',filename = 'img/testimonials/mando.jpg') }}" class="testimonial-img" alt="">
+
+                </div>
+              </div>
+            </div><!-- End Motives item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+
+                </div>
+                <p>
+                  We wanted to do something with hand-tracking.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{{url_for('static',filename = 'img/testimonials/palm.jpg') }}" class="testimonial-img" alt="">
+
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+
+                </div>
+                <p>
+                  We figured that this project would be really beneficial for us as it was a challenging one, meaning that we would learn a lot of stuff as we worked on it.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{{url_for('static',filename = 'img/testimonials/brain.jpg') }}" class="testimonial-img" alt="">
+
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+
+                <p>
+                  We knew we would face a bunch of roadblocks such as the time constraint and finding a way to connect the hand gesture controls to a game.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{{url_for('static',filename = 'img/testimonials/clock.jpg') }}" class="testimonial-img" alt="">
+
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Computer Vision</h2>
+          <p>Our AI Camp Team</p>
+        </header>
+
+        <div class="row gy-4" style="justify-content: center;">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" style="margin-top: 2rem">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{url_for('static',filename = 'img/Prasanga.JPG') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Prasanga Neupane</h4>
+                <span>Computer Vision Professor</span>
+                <p>Prasanga is a Computer Vision Engineer currently pursuing his PHD degree from Louisiana State Univerity. He currently works as a Lead Data Science Intern at AI CAMP and leads the computer vision course. His interest is to use machine learning to solve some real-world problems. He also loves to teach students. </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200" style="margin-top: 2rem">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{url_for('static',filename = 'img/Photos/20220608_082800.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Gonzalo Flores</h4>
+                <span>Game Designer</span>
+                <p>Description</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300" style="margin-top: 2rem">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{url_for('static',filename = 'img/vincent.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.instagram.com/vin.ha_/"><i class="bi bi-instagram" target="_blank"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Vincent Ha</h4>
+                <span>SWE Student</span>
+                <p>Vincent is a junior at William B. Travis High School. He mainly focused on the back-end of this product, in tasks such as training and running the model. He also helped with setting up the front-end of this website. In his free time, he likes to play games, play the drums, code, and listen to music.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400" style="margin-top: 2rem">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{url_for('static',filename = 'img/Dale.png') }}" class="img-fluid" alt="">
+                <div class="social">
+                  
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Dale Ploen</h4>
+                <span>Engineering Student</span>
+                <p>As a graduate and engineering student from Northside High School (Class of 2022), Dale is a soon-to-be college freshman at Columbus State University. For this project, he worked with training the model in Roboflow through data collection and labeling. He also helped with evaluating the model, web development, and debugging. Outside of camp, he enjoys creative activities, games, and putting his heart and soul into projects. Oh, and coding too!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400" style="margin-top: 2rem">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{url_for('static',filename = 'img/default.png') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Alan Wu</h4>
+                <span>Insert Role Here</span>
+                <p>Description</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400" style="margin-top: 2rem">
+            <div class="member">
+              <div class="member-img">
+                <img src="{{url_for('static',filename = 'img/Noah.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Noah Yu</h4>
+                <span>Insert Role Here</span>
+                <p>Description</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Team Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4" style="justify-content: center">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="/a7be104f-b125-41ec-8d81-76ef0cb614cc/port/12346/" class="logo d-flex align-items-center">
+              <img src="{{url_for('static',filename = 'img/logotest.png')}}" alt="">
+              <span>Need a Hand?</span>
+            </a>
+            <p>AI Camp's mission is to foster the minds of young and inspiring students to achieve what they only thought were dreams. Through the constant dedication of staff and students, wonderful and innovative products have been produced.</p>
+            <div class="social-links mt-3">
+              <a href="https://www.tiktok.com/@aicamp?lang=en" class="tiktok" target="_blank"><i class="bi bi-tiktok"></i></a>
+              <a href="https://www.facebook.com/aicampdotorg/" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/aicamp1/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/ai-camp" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#model">Explore</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#journey">The Journey</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact AI Camp</h4>
+            <p>
+              <strong>Email:</strong> hello@ai-camp.org<br>
+              <strong>Phone:</strong> (650) 436-4477<br>
+              <strong>Address:</strong> 2627 Hanover Street, Palo Alto, CA 94304<br>
+
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+ <script>
+    document.getElementById("file").onchange = function() {
+    document.getElementById("form").submit();
+    };
+  </script>
+  <script src="{{url_for('static',filename = 'vendor/purecounter/purecounter.js') }}"></script>
+  <script src="{{url_for('static',filename = 'vendor/aos/aos.js') }}"></script>
+  <script src="{{url_for('static',filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{url_for('static',filename = 'vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{url_for('static',filename = 'vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{url_for('static',filename = 'vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{url_for('static',filename = 'vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+
+  <script src="{{url_for('static',filename = 'js/main.js') }}"></script>
+
+  </body>
+
+</html>
