@@ -1,4 +1,4 @@
-from flask import send_from_directory, Response
+from flask import send_from_directory
 from flask import Flask, flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from flask import render_template
@@ -6,15 +6,10 @@ from url_utils import get_base_url
 import os
 import torch
 
-import threading
-import pyautogui
-import cv2
-
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
-port = 12347
+port = 12346
 base_url = get_base_url(port)
-video = cv2.VideoCapture(0)
 
 # if the base url is not empty, then the server is running in development, and we need to specify the static folder so that the static files are served
 if base_url == '/':
@@ -132,57 +127,11 @@ def files(filename):
 # @app.route(f'{base_url}/team_members')
 # def team_members():
 #     return render_template('team_members.html') # would need to actually make this page
-def target_function(video):
-    while True:
-        success, image = video.read()
-        # detected = "D:\AICamp\CrashCourse\HaarWebcam\static\yolov5"
-
-        # results = model(image)
-        results = model(image, size=416)
-        # if len(results.pandas().xyxy) > 0:
-        labels = list(results.pandas().xyxy[0]['name'])
-        print("Detected:", labels)
-        if len(labels) >0:
-            if labels[0] == "Stop":
-                pyautogui.press("s")
-            elif labels[0] == "Left":
-                pyautogui.press("d")
-            elif labels[0] == "Right":
-                pyautogui.press("a")
-            elif labels[0] == "Up":
-                pyautogui.press(" ")
-            elif labels[0] == "Attack":
-                pyautogui.click()
-        # print("Results::", results)
-
-                # encode the frame in JPEG format
-        image = results.render()[0]
-        (flag, encodedImage) = cv2.imencode(".jpg", image)
-                # ensure the frame was successfully encoded
-
-        # yield the output frame in the byte format
-        yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' +
-               bytearray(encodedImage) + b'\r\n')
-#background process happening without any refreshing
-@app.route('/background_process_test')
-def background_process_test():
-    t = threading.Thread(target=target_function(), name="name", args=video)
-    t.daemon = True
-    t.start()
-    return ("nothing")
-
-@app.route("/video_feed")
-def video_feed():
-	# return the response generated along with the specific media
-	# type (mime type)
-	return Response(target_function(video),
-		mimetype = "multipart/x-mixed-replace; boundary=frame")
-
-
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
+    # website_url = 'cocalc15.ai-camp.dev'
     website_url = 'localhost'
-    
+
     print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
     app.run(host = '0.0.0.0', port=port, debug=True)

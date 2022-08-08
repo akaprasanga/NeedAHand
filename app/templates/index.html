@@ -38,19 +38,6 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type=text/javascript>
-        $(function() {
-          $('a#test').on('click', function(e) {
-            e.preventDefault()
-            $.getJSON('/background_process_test',
-                function(data) {
-              //do nothing
-            });
-            return false;
-          });
-        });
-</script>
 </head>
 
 <body>
@@ -68,6 +55,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto active" href="#model">Model</a></li>
+          <li><a class="nav-link scrollto active" href="https://github.com/akaprasanga/NeedAHand">Github</a></li>
           <li><a class="nav-link scrollto active" href="#about">About</a></li>
           <li><a class="nav-link scrollto active" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto active" href="#testimonials">Motives</a></li>
@@ -207,15 +195,11 @@
 
     <!-- ======= Game Section ======= -->
     <div id="game" class="game">
-            <h3>See the Magic of Gesture</h3>
-        <form>
-            <a href=# id=test><button class='btn btn-default'>Click here to play with Gestures</button></a>
-        </form>
 
       <center>
-       <iframe frameborder="0" src="https://itch.io/embed-upload/6023797?color=333333" allowfullscreen="" width="990" height="620" align="left"><a href="https://the-kilogramo15.itch.io/ai-camp-project">Play Need a Hand on itch.io</a></iframe>
+       <iframe frameborder="0" src="https://itch.io/embed-upload/6028810?color=333333" allowfullscreen="" width="990" height="620"><a href="https://the-kilogramo15.itch.io/ai-camp-project">Play Need a Hand on itch.io</a></iframe>
       </center>
-    <img src="{{ "/video_feed" }}" width="200" height="200">
+
     </div><!-- End Game Section -->
     </section>
     
@@ -296,7 +280,7 @@
                 <div id="journey-content-2" class="accordion-collapse collapse" data-bs-parent="#journeylist1">
                   <div class="accordion-body">
                     <p style="margin-bottom: 25px;">
-                      We used 3 sources of data collection: <br><br> 1. Web-scraping: the use of images from Google <br>2. Public databases <br>3. Webcam footage<br><br>We collected and organized all our data on a website called <a href="https://roboflow.com/">Roboflow</a>.While collecting data, we divided all the different gestures (left, right, up, stop, and attack) across the 5 of us. We collected and annotated our individual gesture. After our first training session, we realized we needed more data, so we individually took webcam footage for all the other gestures we didn't do to better the results. During our pre-processing, we split the images with 70% for training (647 image), 20% for validation (183 images), and 10% for testing (97 images). This totaled around 930 images. We then resized all the images to 416 x 416 pixels and unified the class names to "Left", "Right", "Up", "Stop", and "Attack". We finally augmented our data using grayscale, hue, saturation, brightness, exposure, blur, and noise. This in turn tripled our dataset, making our model more robust.
+                      We used 3 sources of data collection: <br><br> 1. Web-scraping: the use of images from Google <br>2. Public databases <br>3. Webcam footage<br><br>We collected and organized all our data on a website called <a href="https://roboflow.com/">Roboflow</a>. While collecting data, we divided all the different gestures (left, right, up, stop, and attack) across the 5 of us. We collected and annotated our individual gesture. After our first training session, we realized we needed more data, so we individually took webcam footage for all the other gestures we didn't do to better the results. During our pre-processing, we split the images with 70% for training (647 image), 20% for validation (183 images), and 10% for testing (97 images). This totaled around 930 images. We then resized all the images to 416 x 416 pixels and unified the class names to "Left", "Right", "Up", "Stop", and "Attack". We finally augmented our data using grayscale, hue, saturation, brightness, exposure, blur, and noise. This in turn tripled our dataset, making our model more robust.
                     </p>
                     <center>
                       <div>
@@ -319,7 +303,7 @@
                     <p style="margin-bottom: 25px;">
                       For training our model, we used <a href="https://cocalc.com/">CoCalc's</a> virtual machine software and ran our dataset through it. We used the Yolov5s model (2nd smallest YOLO model) in order to achieve decent frame rate object detection on live-footage with the sacrifice of the model being slightly inaccurate. Our first training session had many flaws, namely the model falsely detecting hand gestures in the background of images or mixing up gestures with one another, or detecting hand gestures at all. On our final data collection and training session, we removed all the clip-art gathered from the first round of web-scrapping and added more images of each gesture with various positions to increase variability, allowing our model to achieve viably accurate detections.
                     </p>
-                    <center><img src = "{{url_for('static',filename = 'img/confusion_matrix.png') }}" class="processImg"/></center>
+                    <center><img src = "{{url_for('static',filename = 'img/confusion_matrix.png') }}" class="processImg" style="max-width: 60%; max-height:60%"/></center>
                   </div>
                 </div>
               </div>
@@ -648,16 +632,12 @@
               <div class="member-img">
                 <img src="{{url_for('static',filename = 'img/Prasanga.JPG') }}" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
                 <h4>Prasanga Neupane</h4>
                 <span>Computer Vision Professor</span>
-                <p>Prasanga is a Computer Vision Engineer currently pursuing his PHD degree from Louisiana State Univerity. He currently works as a Lead Data Science Intern at AI CAMP and leads the computer vision course. His interest is to use machine learning to solve some real-world problems. He also loves to teach students. </p>
+                <p>Prasanga is a Computer Vision Engineer currently pursuing his PHD degree from Louisiana State University. He currently works as a Lead Data Science Intern at AI CAMP and leads the computer vision course. His interest is to use machine learning to solve some real-world problems. He also loves to teach students. </p>
               </div>
             </div>
           </div>
@@ -667,16 +647,14 @@
               <div class="member-img">
                 <img src="{{url_for('static',filename = 'img/Photos/20220608_082800.jpg') }}" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://the-kilogramo15.itch.io"><i class="bi bi-linkedin"></i></a>
+
                 </div>
               </div>
               <div class="member-info">
                 <h4>Gonzalo Flores</h4>
                 <span>Game Designer</span>
-                <p>Description</p>
+                <p>Gonzalo is a student at Advanced Technologies Academy. He took care of the game part of the project, as he used Unity to make it. Outside of the camp, he likes to play and make video games.</p>
               </div>
             </div>
           </div>
@@ -708,7 +686,7 @@
               <div class="member-info">
                 <h4>Dale Ploen</h4>
                 <span>Engineering Student</span>
-                <p>As a graduate and engineering student from Northside High School (Class of 2022), Dale is a soon-to-be college freshman at Columbus State University. For this project, he worked with training the model in Roboflow through data collection and labeling. He also helped with evaluating the model, web development, and debugging. Outside of camp, he enjoys creative activities, games, and putting his heart and soul into projects. Oh, and coding too!</p>
+                <p>As a graduate and engineering student from Northside High School (Class of 2022), Dale is a soon-to-be college freshman at Columbus State University. For this project, he worked with training the model through data collection and labeling. He also helped with evaluating the model, web development, and debugging. Outside of camp, he enjoys creative activities and putting his heart and soul into projects. Oh, and coding too!</p>
               </div>
             </div>
           </div>
@@ -716,18 +694,14 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400" style="margin-top: 2rem">
             <div class="member">
               <div class="member-img">
-                <img src="{{url_for('static',filename = 'img/default.png') }}" class="img-fluid" alt="">
+                <img src="{{url_for('static',filename = 'img/Alan.JPG') }}" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
                 <h4>Alan Wu</h4>
-                <span>Insert Role Here</span>
-                <p>Description</p>
+                <span>Project Manager</span>
+                <p>Alan is a junior at Adlai E. Stevenson High School. He worked on organizing the group as project manager, assigning tasks and making sure things are done on time. He also worked on collecting data to train the model. Alan likes music: he plays guitar and piano, he also enjoys the outdoors, and he fishes a lot. </p>
               </div>
             </div>
           </div>
@@ -737,16 +711,12 @@
               <div class="member-img">
                 <img src="{{url_for('static',filename = 'img/Noah.jpg') }}" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
                 <h4>Noah Yu</h4>
-                <span>Insert Role Here</span>
-                <p>Description</p>
+                <span>AI Camp Student</span>
+                <p>Noah is a junior at Lebanon Trail High School. He mainly focused on supporting other teammates and helped with reconization part of the project. He enjoys playing instruments for his downtime.</p>
               </div>
             </div>
           </div>

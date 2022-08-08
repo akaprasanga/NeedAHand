@@ -1,18 +1,18 @@
 # Need A Hand
+##### A GAME THAT YOU CAN CONTROL WITH YOUR HAND GESTURES
 Lets leverage the a power of hand in games. No more clicks, and no more button press. We can now just play games with the gestures.
 
-**Need A Hand** is a platform game where you can control the actions using our hand gestures using your webcam.
+**Need A Hand** is a platform game where you can control the actions using your hand gestures pointing towards the webcam.
 
-### Video Guide
-[![Deploy a Web Project with Flask](https://img.youtube.com/vi/JUb-PpejA7w/0.jpg)](https://youtu.be/JUb-PpejA7w "Deploy a Web Project with Flask")
-
-This guide covers how you can quickly deploy most projects with the [Flask](https://flask.palletsprojects.com/) framework and our omni scaffold.
+### Snap Shots
+![Alt text](app/static/img/needahand_preview.JPG?raw=true "Title")
+![Alt text](app/static/img/portfolio/game_3a.jpg?raw=true "Title")
 
 ### Quickstart Guide for Local Development
 
 First clone this repository through 
 
-`https://github.com/organization-x/omni`
+`https://github.com/akaprasanga/NeedAHand`
 
 cd into the `/app` folder
 
