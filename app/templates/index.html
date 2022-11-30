@@ -194,13 +194,21 @@
     </div><!-- End Forms Section -->
 
     <!-- ======= Game Section ======= -->
+    <div class="horizontal-container">
     <div id="game" class="game">
 
       <center>
        <iframe frameborder="0" src="https://itch.io/embed-upload/6028810?color=333333" allowfullscreen="" width="990" height="620"><a href="https://the-kilogramo15.itch.io/ai-camp-project">Play Need a Hand on itch.io</a></iframe>
       </center>
-
-    </div><!-- End Game Section -->
+    </div>
+        <div>
+            <button id="btntoggle" onclick="cameraonoff()">On</button>
+            <video id="video" width="400" height="400" autoplay></video>
+            <canvas hidden id="canvas" width="400" height="400" style="background-color: grey"></canvas>
+            <img id="server"     src="" width="400" height="400" style="background-color: grey" />
+        </div>
+    </div>
+        <!-- End Game Section -->
     </section>
     
     <!-- ======= About Section ======= -->
@@ -805,6 +813,84 @@
   <!-- Template Main JS File -->
 
   <script src="{{url_for('static',filename = 'js/main.js') }}"></script>
+  <script>
+      //var videoElem = document.getElementById("video");
+      var video = document.getElementById('video');
+      var canvas = document.getElementById('canvas');
+      //var canvas = document.createElement('canvas');
+      var context = canvas.getContext('2d');
+      var server = document.getElementById('server');
+
+      var btnElm = document.getElementById("btntoggle");
+      var isPlaying = !!video.srcObject;
+      function cameraonoff() {
+        if (!isPlaying) {
+          cameraon();
+        } else {
+          cameraoff();
+        }
+      }
+
+      function cameraon() {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          navigator.mediaDevices
+            .getUserMedia({
+              video: true
+            })
+            .then(function (stream) {
+              video.srcObject = stream;
+              video.play();
+
+                      window.setInterval(function() {
+            context.drawImage(video, 0, 0, 400, 400); // better use size because camera may gives data in different size then <video> is displaying
+            canvas.toBlob(upload, "image/jpeg");
+        }, 100);
+
+                      // get image from canvas, send to server as POST, get result image, display image as IMG
+function upload(file) {
+    // create form and add file
+    var formdata = new FormData();
+    formdata.append("snap", file);
+    // create AJAX connection
+    fetch("{{ url_for('upload') }}", {
+        method: 'POST',
+        body: formdata,
+        //headers: {"Content-type": "application/x-www-form-urlencoded; charset=UTF-8"}  // makes only problem
+    }).then(function(response) {
+        return response.blob();
+    }).then(function(blob) {
+        //console.log(blob);  // it slow down video from server
+        server.src = URL.createObjectURL(blob);
+    }).catch(function(err) {
+        console.log('Fetch problem: ' + err.message);
+    });
+
+}
+
+            })
+            .then(() => {
+              isPlaying = true;
+              btnElm.innerText = "Off";
+            });
+        }
+      }
+
+      function cameraoff() {
+        const stream = video.srcObject;
+        if (stream) {
+          const tracks = stream.getTracks();
+
+          tracks.forEach(function (track) {
+            track.stop();
+          });
+
+          video.srcObject = null;
+          isPlaying = false;
+          btnElm.innerText = "On";
+        }
+      }
+
+  </script>
 
   </body>
 

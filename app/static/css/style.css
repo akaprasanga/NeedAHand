@@ -633,6 +633,9 @@ section {
     border-radius: 9px;
     border-width: 10px;
 }
+.horizontal-container {
+    display: flex;
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
